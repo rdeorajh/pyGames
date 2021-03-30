@@ -1,2 +1,2 @@
 # pyGames
-Collection of python games
+My collection of python games using pygame
