@@ -1,7 +1,7 @@
 import pygame
 from snakeObj import *
 pygame.init()
-
+clock = pygame.time.Clock()
 run = True
 
 class windowObject(object):
@@ -22,8 +22,10 @@ class windowObject(object):
 snakeWin = windowObject(640,480)
 snakeWin.drawWindow()
 snake1 = snake(640/2,480/2,10)
+snake1.updateSnake()
 snake1.draw(snakeWin)
 while run:
+    clock.tick(27)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
