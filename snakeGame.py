@@ -21,18 +21,21 @@ class windowObject(object):
 
 snakeWin = windowObject(640,480)
 snakeWin.drawWindow()
-snake1 = snake(640/2,480/2,10)
-snake1.updateSnake()
+snake1 = snake(640/2,480/2,20)
+snake1.updateSnakeSize(5)
 snake1.draw(snakeWin)
+
+delayTime = 100
+
 while run:
-    clock.tick(27)
+    clock.tick(60)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
     
     keys = pygame.key.get_pressed()
 
-    snake1.updatePos(keys,snakeWin)
+    snake1.updateHeadPos(keys,snakeWin)
 
 
 
@@ -40,6 +43,9 @@ while run:
     snakeWin.drawWindow()
     snake1.draw(snakeWin)
     pygame.display.update()
+
+    #DelayTimer
+    pygame.time.delay(delayTime)
 
 
 pygame.quit()
