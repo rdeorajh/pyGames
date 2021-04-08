@@ -122,7 +122,7 @@ while run:
             if delayTime > 50:
                 delayTime -= delayStep
             elif delayTime > 0:
-                delayTime -= delayStep//2
+                delayTime -= delayStep//5
 
         #Draw
         snakeWin.drawWindow()
