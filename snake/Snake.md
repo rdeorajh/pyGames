@@ -1,2 +1,2 @@
-# pyGames
-My collection of python games using pygame
+# Snake
+My rendition of the classic snake game
